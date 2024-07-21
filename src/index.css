@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --cyan-500: #00bcd4;
+    --emerald-500: #4caf50;
+    --pink-500: #e91e63;
+    --indigo-500: #3f51b5;
+    --orange-500: #ff9800;
+    --yellow-500: #ffeb3b;
+    --slate-900: #1e293b;
+    --black: #000000;
+    --neutral-900: #121212;
+  }
+  

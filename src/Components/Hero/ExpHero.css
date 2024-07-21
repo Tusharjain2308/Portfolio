@@ -1,0 +1,9 @@
+.sticky-scroll {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  .sticky-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
