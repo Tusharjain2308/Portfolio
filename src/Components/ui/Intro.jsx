@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-export const FlipWords = ({ words, duration = 3000, className }) => {
+export const FlipWords = ({ words, duration = 1000, className }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -34,7 +34,7 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
           y: 0,
         }}
         transition={{
-          duration: 0.02,
+          duration: 0.01,
           ease: "easeInOut",
           type: "spring",
           stiffness: 100,

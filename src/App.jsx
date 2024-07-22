@@ -9,6 +9,7 @@ import { HeroParallaxDemo } from './Components/Hero/ParallaxTech';
 import { VortexDemo } from './Components/Hero/VortexHero';
 import { ProjectCardsDemo } from './Components/Hero/Projects';
 import { AnimatedPinDemo } from './Components/Hero/ProfileHero';
+import { TextGenerateEffectDemo } from './Components/Hero/AutoTextHero';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
     <VortexDemo/>
     <ProjectCardsDemo/>
     <AnimatedPinDemo/>
+    <TextGenerateEffectDemo/>
     </>
   )
 }
