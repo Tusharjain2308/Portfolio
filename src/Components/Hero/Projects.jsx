@@ -34,6 +34,7 @@ export function ProjectCardsDemo() {
   ];
 
   return (
+    <>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var">
@@ -68,17 +69,14 @@ export function ProjectCardsDemo() {
               >
                 Try now →
               </CardItem>
-              <CardItem
-                translateZ={20}
-                as="button"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-              >
-                Sign up
-              </CardItem>
             </div>
           </CardBody>
         </CardContainer>
+
+        
       ))}
+
     </div>
+    </>
   );
 }
