@@ -6,6 +6,8 @@ import { GoogleGeminiEffectDemo } from './Components/Hero/GeminiEffect';
 import { LampDemo} from './Components/Hero/LampHero';
 import { StickyScrollRevealDemo } from './Components/Hero/ExpHero';
 import { HeroParallaxDemo } from './Components/Hero/ParallaxTech';
+import { VortexDemo } from './Components/Hero/VortexHero';
+import { ProjectCardsDemo } from './Components/Hero/Projects';
 
 const App = () => {
   return (
@@ -18,7 +20,8 @@ const App = () => {
     
     <StickyScrollRevealDemo/>
     <HeroParallaxDemo/>
-    <CanvasRevealEffectDemo/>
+    <VortexDemo/>
+    <ProjectCardsDemo/>
     </>
   )
 }

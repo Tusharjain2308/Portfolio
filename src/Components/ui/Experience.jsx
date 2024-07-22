@@ -55,10 +55,10 @@ export const StickyScroll = ({ content, contentClassName }) => {
         animate={{
           backgroundColor: backgroundColors[0],
         }}
-        className="h-[45rem] overflow-y-auto scrollbar-hidden bg-black flex justify-center relative space-x-10 rounded-md p-10"
+        className="h-[45rem] overflow-y-auto scrollbar-hidden bg-black px-10 flex justify-center relative space-x-10 rounded-md p-10"
         ref={ref}
       >
-        <div className="relative flex items-start px-4">
+        <div className="relative flex items-start px-20">
           <div className="max-w-3xl">
             {content.map((item, index) => (
               <div key={item.title + index} className="my-20 text-center">

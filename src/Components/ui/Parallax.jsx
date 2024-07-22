@@ -41,7 +41,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[380vh] bg-black py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="sm:h-[250vh] md:h-[310vh] lg:h-[300vh] bg-black py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -91,7 +91,7 @@ export const Header = () => {
         My Tech Stack
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        These are the tech stacks, I am comfortable working On !!
+      React.js, Tailwind CSS, Figma, Canva, Material UI, React Router DOM, Axios, styled-components, JavaScript, HTML, CSS, C++
       </p>
     </div>
   );
@@ -107,7 +107,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-80 w-[20rem] relative flex-shrink-0"
     >
       <a
         href={product.link}
@@ -115,8 +115,8 @@ export const ProductCard = ({ product, translate }) => {
       >
         <img
           src={product.image}
-          height="600"
-          width="600"
+          height="200"
+          width="200"
           className="object-contain object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

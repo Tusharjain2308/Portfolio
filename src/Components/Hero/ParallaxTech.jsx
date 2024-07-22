@@ -21,78 +21,64 @@ export function HeroParallaxDemo() {
 
 export const products = [
   {
-    title: "JavaScript",
-    link: "https://gomoonbeam.com",
+    title: "Tailwind css",
     image: css,
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "Html",
     image: html,
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "Javascript",
     image: js,
   },
   {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "C++",
     image: c,
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
+    title: "Figma",
     image: figma,
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
+    title: "Github",
     image: github,
   },
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "React",
     image: react,
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "Figma",
     image: figma,
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "Python",
     image: python,
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "Bootstrap",
     image: bootstrap,
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    title: "Git",
     image: git,
   },
+  
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Nodejs",
     image: nodejs,
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "Canva",
     image: canva,
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "Capcut",
     image: capcut,
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "MongoDb",
     image: mongo,
   },
 ];

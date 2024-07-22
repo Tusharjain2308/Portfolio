@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+}
+
 :root {
     --cyan-500: #00bcd4;
     --emerald-500: #4caf50;
