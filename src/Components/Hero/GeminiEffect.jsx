@@ -13,11 +13,11 @@ export function GoogleGeminiEffectDemo() {
     offset: ["start start", "end start"],
   });
 
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.7], [0.4, 1.4]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.7], [0.4, 1.4]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.7], [0.4, 1.4]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.7], [0.4, 1.4]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.7], [0.4, 1.4]);
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.3]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.3]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.3]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.3]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.7], [0.3, 1.3]);
 
   return (
     <>
@@ -37,9 +37,9 @@ export function GoogleGeminiEffectDemo() {
     </div>
 
     <div className="h-[60rem] flex justify-center items-center px-4 bg-black overflow-x-hidden">
-      <div className="relative flex flex-col items-center text-2xl md:text-4xl lg:text-6xl font-normal text-white ">
+      <div className="relative flex flex-col items-center sm:text-2xl md:text-4xl lg:text-6xl font-normal text-white ">
         <span>Hello, I am a</span>
-        <div className="my-4 absolute top-14 whitespace-nowrap text-6xl md:text-7xl lg:text-10xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+        <div className="my-4 absolute top-14 whitespace-nowrap am:text-6xl md:text-7xl lg:text-10xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
           <FlipWords words={words} />
         </div>
       </div>

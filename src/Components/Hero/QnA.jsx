@@ -1,7 +1,7 @@
 import { PlaceholdersAndVanishInput } from "../ui/Form.jsx";
 import useScrollToTop from "../../utils/scrolltotop.jsx";
 
-export function PlaceholdersAndVanishInputDemo() {
+export function Feedback() {
   useScrollToTop();
   const placeholders = [
     "What technologies were used to build this website?",
@@ -25,6 +25,9 @@ export function PlaceholdersAndVanishInputDemo() {
       <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
         Ask Me Anything
       </h2>
+      <p className="mb-4 text-center text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+        Please enter your <strong>name</strong> and <strong>message</strong> below.
+      </p>
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}

@@ -1,6 +1,8 @@
+// src/ui/Form.jsx
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../../utils/cn.js";
+import { sendEmail } from "../../utils/email.jsx"; // Import the sendEmail function
 
 export function PlaceholdersAndVanishInput({ placeholders, onChange, onSubmit }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
@@ -163,6 +165,12 @@ export function PlaceholdersAndVanishInput({ placeholders, onChange, onSubmit })
     e.preventDefault();
     vanishAndSubmit();
     if (onSubmit) onSubmit(e);
+
+    // Send email using EmailJS
+    const formData = {
+      message: value,
+    };
+    sendEmail(formData);
   };
 
   return (

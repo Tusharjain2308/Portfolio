@@ -9,8 +9,8 @@ export function AnimatedPinDemo() {
   useScrollToTop();
 
   return (
-    <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:mt-10 ">
-      <h1 className="text-4xl font-bold text-slate-100 mb-6">
+    <div className="h-[40rem] w-full flex flex-col items-center justify-center mt-10 ">
+      <h1 className="text-4xl font-bold text-slate-100 mb-6 mt-10 sm:mt-15">
         Check out more on my profiles
       </h1>
 
@@ -18,7 +18,7 @@ export function AnimatedPinDemo() {
         <PinContainer
           title="GitHub"
           href="https://github.com/Tusharjain2308"
-          className="mb-6 sm:mb-0" // Add margin-bottom for small devices
+          className="mb-6 sm:mb-0" 
         >
           <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] relative group" style={{boxShadow: '0 0 20px 10px rgba(128, 0, 128, 0.5)'}}>
             <FaGithub className="absolute top-4 right-4 text-white text-4xl" />
