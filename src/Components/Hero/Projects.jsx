@@ -9,9 +9,9 @@ export function ProjectCardsDemo() {
   const cards = [
     {
       title: "PortFolio Website",
-      description: "Portfolio made with React, Tailwind, Framer motion and Aceternity UI",
+      description: "A personal portfolio showcasing skills and projects, built with React, Tailwind CSS, and Framer Motion for dynamic animations and Aceternity UI for a modern look.",
       imgSrc: portfolio,
-      link: "https://twitter.com/mannupaaji",
+      link: "https://portfolio-theta-five-31.vercel.app/",
     },
     {
       title: "Gamer's Nexus",
