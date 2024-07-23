@@ -6,7 +6,7 @@ import leetcodeBackground from '../../assets/leetcode.png';
 
 export function AnimatedPinDemo() {
   return (
-    <div className="h-[40rem] w-full flex flex-col items-center justify-center">
+    <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:mt-20 md:mt-10">
       <h1 className="text-4xl font-bold text-slate-100 mb-6">
         Check out more on my profiles
       </h1>

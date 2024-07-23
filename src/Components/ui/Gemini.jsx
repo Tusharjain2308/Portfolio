@@ -8,7 +8,7 @@ const transition = {
 
 const GoogleGeminiEffect = ({ pathLengths, className }) => {
   return (
-    <div className={`sticky top-20 ${className}`}>
+    <div className={`sticky top-10 ${className}`}>
       <svg
         width="1440"
         height="890"

@@ -1,5 +1,4 @@
 import React from 'react'
-import { CanvasRevealEffectDemo } from './Components/Hero/Hero1';
 import { HeroScrollDemo } from './Components/Hero/Hero2';
 import { FlipWordsDemo } from './Components/Hero/IntroHero';
 import { GoogleGeminiEffectDemo } from './Components/Hero/GeminiEffect';
