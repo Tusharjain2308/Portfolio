@@ -7,7 +7,7 @@ import { TypewriterEffectSmooth } from "../ui/Typewriter";
 export function HeroScrollDemo() {
   const words = [
     {
-      text: "'_' Welcome",
+      text: "➴ Welcome",
       className:
         "text-2xl md:text-3xl lg:text-5xl ",
     },
@@ -22,7 +22,7 @@ export function HeroScrollDemo() {
         "text-3xl md:text-4xl lg:text-6xl text-pink-500 dark:text-pink-400",
     },
     {
-      text: "Portfolio '_'",
+      text: "Portfolio 💗",
       className:
         "text-3xl md:text-4xl lg:text-6xl text-blue-500 dark:text-blue-400",
     },

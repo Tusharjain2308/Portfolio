@@ -1,104 +1,120 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll, motion } from "framer-motion";
+import {
+  motion,
+  useTransform,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 import { cn } from "../../utils/cn.js";
 
-export const StickyScroll = ({ content, contentClassName }) => {
-  const [activeCard, setActiveCard] = useState(0);
+export const TracingBeam = ({ children, className }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    container: ref,
+    target: ref,
     offset: ["start start", "end start"],
   });
-  const cardLength = content.length;
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
-        }
-        return acc;
-      },
-      0
-    );
-    setActiveCard(closestBreakpointIndex);
-  });
-
-  const backgroundColors = ["var(--black)", "var(--black)", "var(--black)"];
-  const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
-  ];
-
-  const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
+  const contentRef = useRef(null);
+  const [svgHeight, setSvgHeight] = useState(0);
 
   useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+    if (contentRef.current) {
+      setSvgHeight(contentRef.current.offsetHeight);
+    }
+  }, []);
+
+  const y1 = useSpring(
+    useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
+    {
+      stiffness: 500,
+      damping: 90,
+    }
+  );
+  const y2 = useSpring(
+    useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
+    {
+      stiffness: 500,
+      damping: 90,
+    }
+  );
 
   return (
-    <div>
-      <style jsx>{`
-        .scrollbar-hidden::-webkit-scrollbar {
-          display: none; /* For Chrome, Safari, and Opera */
-        }
-
-        .scrollbar-hidden {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-      `}</style>
-      <motion.div
-        animate={{
-          backgroundColor: backgroundColors[0],
-        }}
-        className="h-[45rem] overflow-y-auto scrollbar-hidden bg-black px-10 flex justify-center relative space-x-10 rounded-md p-10"
-        ref={ref}
-      >
-        <div className="relative flex items-start px-20">
-          <div className="max-w-3xl">
-            {content.map((item, index) => (
-              <div key={item.title + index} className="my-20 text-center">
-                <motion.h2
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className="text-6xl font-bold text-slate-100"
-                >
-                  {item.title}
-                </motion.h2>
-                <motion.p
-                  initial={{
-                    opacity: 0,
-                  }}
-                  animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
-                  }}
-                  className="text-2xl text-slate-300 max-w-sm mt-10 mx-auto"
-                >
-                  {item.description}
-                </motion.p>
-              </div>
-            ))}
-            <div className="h-40" />
-          </div>
-        </div>
-        <div
-          style={{ background: backgroundGradient }}
-          className={cn(
-            "hidden lg:block h-80 w-100 rounded-md bg-black sticky top-10 overflow-hidden",
-            contentClassName
-          )}
+    <motion.div
+      ref={ref}
+      className={cn("relative w-full max-w-6xl mx-auto h-full", className)}
+    >
+      <div className="absolute -left-4 md:-left-20 top-3">
+        <motion.div
+          transition={{
+            duration: 0.2,
+            delay: 0.5,
+          }}
+          animate={{
+            boxShadow:
+              scrollYProgress.get() > 0
+                ? "none"
+                : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+          }}
+          className="ml-[27px] h-4 w-4 rounded-full border border-neutral-200 shadow-sm flex items-center justify-center"
         >
-          {content[activeCard].content ?? null}
-        </div>
-      </motion.div>
-    </div>
+          <motion.div
+            transition={{
+              duration: 0.2,
+              delay: 0.5,
+            }}
+            animate={{
+              backgroundColor:
+                scrollYProgress.get() > 0 ? "white" : "var(--emerald-500)",
+              borderColor:
+                scrollYProgress.get() > 0 ? "white" : "var(--emerald-600)",
+            }}
+            className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
+          />
+        </motion.div>
+        <svg
+          viewBox={`0 0 40 ${svgHeight}`}
+          width="40"
+          height={svgHeight}
+          className="ml-4 block"
+          aria-hidden="true"
+        >
+          <motion.path
+            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            fill="none"
+            stroke="#9091A0"
+            strokeOpacity="0.16"
+            transition={{
+              duration: 10,
+            }}
+          ></motion.path>
+          <motion.path
+            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            fill="none"
+            stroke="url(#gradient)"
+            strokeWidth="2.5"
+            className="motion-reduce:hidden"
+            transition={{
+              duration: 10,
+            }}
+          ></motion.path>
+          <defs>
+            <motion.linearGradient
+              id="gradient"
+              gradientUnits="userSpaceOnUse"
+              x1="0"
+              x2="0"
+              y1={y1}
+              y2={y2}
+            >
+              <stop stopColor="#18CCFC" stopOpacity="0"></stop>
+              <stop stopColor="#18CCFC"></stop>
+              <stop offset="0.325" stopColor="#6344F5"></stop>
+              <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
+            </motion.linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div ref={contentRef}>{children}</div>
+    </motion.div>
   );
 };

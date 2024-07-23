@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../../utils/cn.js";
 
-export const TextGenerateEffect = ({ words, className, filter = true, duration = 0.5 }) => {
+export const TextGenerateEffect = ({ words, className, filter = true, duration = 0.8 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
 
@@ -15,7 +15,9 @@ export const TextGenerateEffect = ({ words, className, filter = true, duration =
       },
       {
         duration: duration ? duration : 1,
-        delay: stagger(0.2),
+        delay: 0.4,
+
+        repeatType: "reverse"
       }
     );
   }, [scope.current]);
@@ -39,9 +41,9 @@ export const TextGenerateEffect = ({ words, className, filter = true, duration =
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("font-light", className)}>
       <div className="mt-4">
-        <div className="flex flex-col dark:text-white text-black sm:text-2xl md:text-3xl lg:text-4xl items-center align-center leading-snug tracking-wide">
+        <div className="flex flex-col dark:text-white text-black sm:text-xl md:text-2xl lg:text-3xl items-center align-center leading-snug tracking-wide mb-10">
           {renderWords()}
         </div>
       </div>
