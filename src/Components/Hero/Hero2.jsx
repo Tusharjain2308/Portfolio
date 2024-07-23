@@ -1,10 +1,12 @@
 import React from "react";
+import useScrollToTop from "../../utils/scrolltotop";
 import { ContainerScroll } from "../ui/Element2";
 import myimg from "../../assets/img1.jpg";
 import wavyBackground from "../../assets/wavy-background.svg"; // Import the SVG file
 import { TypewriterEffectSmooth } from "../ui/Typewriter";
 
 export function HeroScrollDemo() {
+  useScrollToTop();
   const words = [
     {
       text: "➴ Welcome",

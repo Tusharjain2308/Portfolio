@@ -1,9 +1,11 @@
 import React from "react";
+import useScrollToTop from "../../utils/scrolltotop";
 import { useScroll, useTransform } from "framer-motion";
 import GoogleGeminiEffect from "../ui/Gemini";
 import { FlipWords } from "../ui/Intro";
 
 export function GoogleGeminiEffectDemo() {
+  useScrollToTop();
   const words = ["DESIGNER", "WEB-DEVELOPER", "CODER", "EDITOR"];
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({

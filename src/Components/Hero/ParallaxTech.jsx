@@ -14,8 +14,10 @@ import git from '../../assets/git.png';
 import canva from '../../assets/canva.png';
 import capcut from '../../assets/capcut.png';
 import mongo from '../../assets/mongo.png';
+import useScrollToTop from "../../utils/scrolltotop";
 
 export function HeroParallaxDemo() {
+  useScrollToTop();
   return <HeroParallax products={products} />;
 }
 

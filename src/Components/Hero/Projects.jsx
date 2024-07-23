@@ -4,8 +4,10 @@ import portfolio from '../../assets/portfolio.png'
 import gamer from '../../assets/gamer.png'
 import near from '../../assets/near.png'
 import fashion from '../../assets/fashion.png'
+import useScrollToTop from "../../utils/scrolltotop";
 
 export function ProjectCardsDemo() {
+  useScrollToTop();
   const cards = [
     {
       title: "PortFolio Website",

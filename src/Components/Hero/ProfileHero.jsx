@@ -1,22 +1,26 @@
 import React from "react";
+import useScrollToTop from "../../utils/scrolltotop";
 import { PinContainer } from "../ui/Pin";
 import { FaGithub, FaCode } from "react-icons/fa";
 import githubBackground from '../../assets/gitprofile.png';
 import leetcodeBackground from '../../assets/leetcode.png';
 
 export function AnimatedPinDemo() {
+  useScrollToTop();
+
   return (
-    <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:mt-20 md:mt-10">
+    <div className="h-[40rem] w-full flex flex-col items-center justify-center sm:mt-10 ">
       <h1 className="text-4xl font-bold text-slate-100 mb-6">
         Check out more on my profiles
       </h1>
 
-      <div className="flex flex-wrap gap-6 justify-center my-8">
+      <div className="flex flex-wrap gap-6 justify-center my-8 sm:mb-5">
         <PinContainer
           title="GitHub"
           href="https://github.com/Tusharjain2308"
+          className="mb-6 sm:mb-0" // Add margin-bottom for small devices
         >
-          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] relative group " style={{boxShadow: '0 0 20px 10px rgba(128, 0, 128, 0.5)'}}>
+          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] relative group" style={{boxShadow: '0 0 20px 10px rgba(128, 0, 128, 0.5)'}}>
             <FaGithub className="absolute top-4 right-4 text-white text-4xl" />
             <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
               GitHub
@@ -38,8 +42,9 @@ export function AnimatedPinDemo() {
         <PinContainer
           title="LeetCode"
           href="https://leetcode.com/u/tusharjn23/"
+          className="sm:mt-5"
         >
-          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] relative group " style={{boxShadow: '0 0 20px 10px rgba(0, 0, 255, 0.5)'}}>
+          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] relative group" style={{boxShadow: '0 0 20px 10px rgba(0, 0, 255, 0.5)'}}>
             <FaCode className="absolute top-4 right-4 text-white text-4xl" />
             <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100 ">
               LeetCode

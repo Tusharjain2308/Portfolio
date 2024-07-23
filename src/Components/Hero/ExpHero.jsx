@@ -1,4 +1,5 @@
 import React from "react";
+import useScrollToTop from "../../utils/scrolltotop";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../ui/Experience";
 import img from '../../assets/about.jpg';
@@ -6,6 +7,7 @@ import img2 from '../../assets/education.jpg';
 import img3 from '../../assets/success.jpg';
 
 export function TracingBeamDemo() {
+  useScrollToTop();
   return (
     <TracingBeam className="px-6 bg-black">
       <div className="h-full max-w-4xl mx-auto antialiased pt-4 relative pb-20">

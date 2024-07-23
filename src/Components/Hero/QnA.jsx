@@ -1,6 +1,8 @@
 import { PlaceholdersAndVanishInput } from "../ui/Form.jsx";
+import useScrollToTop from "../../utils/scrolltotop.jsx";
 
 export function PlaceholdersAndVanishInputDemo() {
+  useScrollToTop();
   const placeholders = [
     "What technologies were used to build this website?",
     "Do you have any feedback or suggestions to help me improve your experience on the website?",

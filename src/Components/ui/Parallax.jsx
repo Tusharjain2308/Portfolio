@@ -41,7 +41,7 @@
     return (
       <div
         ref={ref}
-        className="sm:h-[150vh] sm:my-20 md:h-[220vh] lg:h-[330vh] bg-black py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="sm:my-20 md:h-[220vh] lg:h-[365vh] bg-black py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         <Header />
         <motion.div
