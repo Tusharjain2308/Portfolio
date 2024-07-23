@@ -10,7 +10,7 @@ export function AnimatedPinDemo() {
 
   return (
     <div className="h-[40rem] w-full flex flex-col items-center justify-center mt-10 ">
-      <h1 className="text-4xl font-bold text-slate-100 mb-6 mt-10 sm:mt-15">
+      <h1 className="text-4xl font-bold text-slate-100 text-center items-center justify-center mb-6 mt-10 sm:mt-15">
         Check out more on my profiles
       </h1>
 
