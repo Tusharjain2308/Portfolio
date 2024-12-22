@@ -1,7 +1,7 @@
 import React from "react";
 import useScrollToTop from "../../utils/scrolltotop";
 import { ContainerScroll } from "../ui/Element2";
-import myimg from "../../assets/img1.jpg";
+import myimg from "../../assets/img2.jpg";
 import wavyBackground from "../../assets/wavy-background.svg"; // Import the SVG file
 import { TypewriterEffectSmooth } from "../ui/Typewriter";
 
@@ -9,7 +9,7 @@ export function HeroScrollDemo() {
   useScrollToTop();
   const words = [
     {
-      text: "➴ Welcome",
+      text: " Welcome",
       className:
         "text-2xl md:text-3xl lg:text-5xl ",
     },
@@ -24,7 +24,7 @@ export function HeroScrollDemo() {
         "text-3xl md:text-4xl lg:text-6xl text-pink-500 dark:text-pink-400",
     },
     {
-      text: "Portfolio 💗",
+      text: "Portfolio ",
       className:
         "text-3xl md:text-4xl lg:text-6xl text-blue-500 dark:text-blue-400",
     },
@@ -47,13 +47,14 @@ export function HeroScrollDemo() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mt-20">
+      <div className="relative z-30 mt-20 pt-10">
         <ContainerScroll>
-          <div className="mx-auto rounded-2xl overflow-hidden h-full">
+          <div className="mx-auto w-fit rounded-2xl overflow-hidden p-5 ">
             <img
+              loading="lazy"
               src={myimg}
               alt="hero"
-              className="object-cover h-full w-full"
+              className="object-cover h-full w-auto rounded-xl"
             />
           </div>
         </ContainerScroll>
