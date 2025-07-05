@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "../../utils/cn.js"; // Ensure this path is correct
+import { cn } from "../../utils/cn.js"; 
 
 export const PinContainer = ({ children, title, href, className, containerClassName }) => {
   const [transform, setTransform] = useState("translate(-50%,-50%) rotateX(0deg)");
@@ -17,9 +17,9 @@ export const PinContainer = ({ children, title, href, className, containerClassN
       className={cn("relative group/pin z-50 cursor-pointer", containerClassName)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "#"} // Use 'href' prop for standard links
-      target="_blank" // Optional: Open in a new tab
-      rel="noopener noreferrer" // Optional: Security best practice
+      href={href || "#"} 
+      target="_blank" 
+      rel="noopener noreferrer" 
     >
       <div
         style={{ perspective: "1000px", transform: "rotateX(70deg) translateZ(0deg)" }}

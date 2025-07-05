@@ -1,8 +1,9 @@
-import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/Cards";
 import portfolio from '../../assets/portfolio.png'
+import polling from '../../assets/polling.png'
 import gamer from '../../assets/gamer.png'
 import near from '../../assets/near.png'
+import hashpop from '../../assets/hashpop.png'
 import fashion from '../../assets/fashion.png'
 import useScrollToTop from "../../utils/scrolltotop";
 
@@ -10,6 +11,18 @@ export function ProjectCardsDemo() {
   useScrollToTop();
   const cards = [
     {
+      title: "HashPop",
+      description: "An Gen AI based platform that allows users to create trending hashtags for all their social media posts.",
+      imgSrc: hashpop,
+      link: "https://hashtag-generator-9kaw.onrender.com/login",
+    },
+    {
+      title: "Polling App",
+      description: "A polling application built with React, Node.js, and MongoDB, allowing users to create and participate in polls.",
+      imgSrc: polling,
+      link: "https://polling-app-frontend-o9hs.onrender.com/login",
+    },    
+    { 
       title: "PortFolio Website",
       description: "A personal portfolio showcasing skills and projects, built with React, Tailwind CSS, and Framer Motion for dynamic animations and Aceternity UI for a modern look.",
       imgSrc: portfolio,
@@ -37,7 +50,7 @@ export function ProjectCardsDemo() {
 
   return (
     <>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 p-2">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var">
           <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border">

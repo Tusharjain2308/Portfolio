@@ -10,6 +10,7 @@ import { ProjectCardsDemo } from './Components/Hero/Projects';
 import { AnimatedPinDemo } from './Components/Hero/ProfileHero';
 import { TextGenerateEffectDemo } from './Components/Hero/AutoTextHero';
 import {Feedback}  from './Components/Hero/QnA';
+import AboutMeSection from './Components/Hero/Aboutme';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
     <HeroScrollDemo/>
     <GoogleGeminiEffectDemo/>
     <LampDemo/>
-    <TracingBeamDemo/>
+    <AboutMeSection/>
     <HeroParallaxDemo/>
     <VortexDemo/>
     <ProjectCardsDemo/>

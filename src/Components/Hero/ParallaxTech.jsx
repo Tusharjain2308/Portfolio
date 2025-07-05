@@ -1,4 +1,3 @@
-import React from "react";
 import { HeroParallax } from "../ui/Parallax";
 import js from '../../assets/js.png';
 import html from '../../assets/html.png';

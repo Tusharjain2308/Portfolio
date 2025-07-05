@@ -2,13 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn.js";
 
-export const LampContainer = ({ children, className, height = 'min-h-screen' }) => {
+export const LampContainer = ({ children, className, height = "80vh" }) => {
   return (
     <div
       className={cn(
-        `relative flex ${height} flex-col items-center justify-center overflow-hidden bg-black w-full z-0`,
+        `relative flex flex-col items-center justify-center overflow-hidden bg-black w-full z-0`,
         className
       )}
+      style={{ height }}
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
         <motion.div

@@ -91,7 +91,7 @@
           My Tech Stack
         </h1>
         <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-          React.js, Tailwind CSS, Figma, Canva, Material UI, React Router DOM, Axios, styled-components, JavaScript, HTML, CSS, C++, Python, Git, Github, Capcut
+          React.js, Node.js, Express.js, MongoDB, Acerinity UI, Framer Motion, AWS, Prompt Design, SQL, Tailwind CSS, Figma, Canva, Material UI, React Router DOM, Axios, styled-components, JavaScript, HTML, CSS, C++, Python, Git, Github, Capcut
         </p>
       </div>
     );

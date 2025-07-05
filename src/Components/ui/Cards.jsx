@@ -3,7 +3,7 @@ import { cn } from "../../utils/cn.js";
 
 const MouseEnterContext = createContext([false, () => {}]);
 
-export const CardContainer = ({ children, className, containerClassName }) => {
+export const  CardContainer = ({ children, className, containerClassName }) => {
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
